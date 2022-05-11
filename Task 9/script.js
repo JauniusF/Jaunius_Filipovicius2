@@ -14,23 +14,16 @@ class Movie{
     constructor(title, director, budget){
         this.title=title;
         this.director=director;
-        this.budget=budget
-        if (budget>=100000000){
-            budget=true
-            console.log(budget)
-        }else {
-            budget=false
-            console.log(budget)
+        this.budget=budget.value
+        console.log(typeof(budget))
         }
+        wasExpensive=(budget)=>{if (budget >= 100000000){
+            console.log(true)
+        }
+        else {
+            console.log(false)
+        }}
     }
-    wasExpensive(){ 
-    if (budget>=100000000){
-        budget=true
-        console.log(budget)
-    }else {
-        budget=false
-        console.log(budget)
-    }
-}}
-const prastasFilmas=new Movie('bukas ir bukesnis',"Teslagalvis",10000200000)
 
+const prastasFilmas=new Movie('bukas ir bukesnis',"Teslagalvis",400000000000000)
+prastasFilmas.wasExpensive(prastasFilmas)
