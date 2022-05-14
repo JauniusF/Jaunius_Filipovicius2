@@ -23,8 +23,9 @@ function getUserAverageAge(a) {
   b=a.map((a)=>a.age)
   c=0
   b.forEach((b)=>{c=c+b})
-  for (i in b){d=i}
-  c=c/d
+  counter=0
+  for (i in b){counter++}
+  c=c/counter
   return c
 }
 function getUsersNames(a){
